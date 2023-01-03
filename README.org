@@ -1,0 +1,27 @@
+* giteki
+This is my playground project to learn Common Lisp inspired by [[https://github.com/clfreaks/yubin][yubin]] project introduced in [[https://techbookfest.org/event/tbf06/circle/38170002][Survival Common Lisp]].
+
+** Usage
+#+begin_src sh
+  giteki raspberry
+  1 :  2018-05-17 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　３　Ｍｏｄｅｌ　Ｂ＋   <Ｒａｓｐｂｅｒｒｙ　Ｐｉ>
+  2 :  2018-05-17 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　３　Ｍｏｄｅｌ　Ｂ＋   <Ｒａｓｐｂｅｒｒｙ　Ｐｉ>
+  3 :  2018-05-17 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　３　Ｍｏｄｅｌ　Ｂ＋   <Ｒａｓｐｂｅｒｒｙ　Ｐｉ>
+  4 :  2019-09-19 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　３　Ｍｏｄｅｌ　Ａ＋   <ＲＡＳＰＢＥＲＲＹ　ＰＩ　（ＴＲＡＤＩＮＧ）　ＬＩＭＩＴＥＤ>
+  5 :  2019-09-04 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　４　Ｍｏｄｅｌ　Ｂ   <ＲＡＳＰＢＥＲＲＹ　ＰＩ　（ＴＲＡＤＩＮＧ）　ＬＩＭＩＴＥＤ>
+  6 :  2019-09-19 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　３　Ｍｏｄｅｌ　Ａ＋   <ＲＡＳＰＢＥＲＲＹ　ＰＩ　（ＴＲＡＤＩＮＧ）　ＬＩＭＩＴＥＤ>
+  7 :  2019-09-04 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　４　Ｍｏｄｅｌ　Ｂ   <ＲＡＳＰＢＥＲＲＹ　ＰＩ　（ＴＲＡＤＩＮＧ）　ＬＩＭＩＴＥＤ>
+  8 :  2019-09-19 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　３　Ｍｏｄｅｌ　Ａ＋   <ＲＡＳＰＢＥＲＲＹ　ＰＩ　（ＴＲＡＤＩＮＧ）　ＬＩＭＩＴＥＤ>
+  9 :  2019-09-04 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　４　Ｍｏｄｅｌ　Ｂ   <ＲＡＳＰＢＥＲＲＹ　ＰＩ　（ＴＲＡＤＩＮＧ）　ＬＩＭＩＴＥＤ>
+  10:  2022-03-23 :  Ｒａｓｐｂｅｒｒｙ　Ｐｉ　Ｃｏｍｐｕｔｅ　Ｍｏｄｕｌｅ　４   <ＲＡＳＰＢＥＲＲＹ　ＰＩ　ＬＴＤ>
+#+end_src
+
+** Installation
+You can install giteki using Roswell
+#+begin_src sh
+  ros install tomoyukim/giteki
+#+end_src
+
+** Reference
+- [[https://www.tele.soumu.go.jp/j/sys/equ/tech/webapi/][Web-API機能（技術基準適合証明等を受けた機器の検索）について | 総務省]]
+  - Note: This project uses CP932 for url encoding data in the request instead of CP943C required in the spec.

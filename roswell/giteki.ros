@@ -1,0 +1,30 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload '(:giteki) :silent t)
+  )
+
+(defpackage :ros.script.giteki.3881310504
+  (:use :cl))
+(in-package :ros.script.giteki.3881310504)
+
+(defun main (tn &rest argv)
+  (declare (ignorable argv))
+  (handler-bind ((error (lambda (e)
+                          (format *standard-output* "~&Error: ~A~%" e)
+                          (uiop:quit -1))))
+    (let ((glist (giteki:search-giteki 1 1 tn)))
+      (mapc #'(lambda (item)
+                (let* ((ginfo (getf item :|gitekiInfo|))
+                       (no (getf ginfo :|no|))
+                       (name (getf ginfo :|name|))
+                       (type (getf ginfo :|typeName|))
+                       (date (getf ginfo :|date|)))
+                  (format t "~&~2A: ~5t~A : ~19t~A   <~A>~%" no date type name)))
+            glist))))
+
+;;; vim: set ft=lisp lisp:
